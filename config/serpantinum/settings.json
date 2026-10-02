@@ -1,0 +1,212 @@
+{
+  "general": {
+    "language": "ru",
+    "avatarPath": "/home/arch/.config/serpantinum/avatar.png",
+    "muteSfx": true,
+    "weatherInterval": 15,
+    "weatherUnit": "metric",
+    "location": {
+      "ip": "194.0.54.21",
+      "latitude": 50.45466,
+      "longitude": 30.5238,
+      "city": "Kyiv",
+      "region": "Kyiv City",
+      "region_code": "30",
+      "country_name": "Ukraine",
+      "country_code": "UA",
+      "postal": "02222",
+      "timezone": "Europe/Kyiv",
+      "utc_offset": "+0300",
+      "currency": "UAH",
+      "languages": "uk,ru-UA,rom,pl,hu",
+      "asn": "AS198820",
+      "org": "Limited Liability Company Radio Network",
+      "source": "ipapi.co",
+      "updated_at": 1790679980
+    },
+    "sfxVolume": 100,
+    "screenshotCaptureOnRelease": false,
+    "quickactions": true
+  },
+  "syspanel": {
+    "clipExpandProgress": 0,
+    "clipExpanded": false,
+    "clipState": 1
+  },
+  "bar": {
+    "position": "bottom",
+    "width": 5,
+    "height": 31,
+    "blur": true,
+    "opacity": 100,
+    "style": "solid",
+    "time": {
+      "format": "HH:mm:ss"
+    },
+    "autohide": false,
+    "autohideTimeout": 1000,
+    "modules": {
+      "left": [
+        "media",
+        "tray",
+        "tasks"
+      ],
+      "center": [
+        [
+          "timedate",
+          "info",
+          "weather",
+          "left",
+          "workspaces"
+        ]
+      ],
+      "right": [
+        [
+          "kb",
+          "wifi",
+          "bt",
+          "vol",
+          "bat"
+        ]
+      ]
+    },
+    "distinctPills": false,
+    "groupColors": {
+      "g_timedate": "#cbbeff",
+      "g_kb": "#623b4b"
+    },
+    "workspacesStyle": "numbers",
+    "timeStyle": "classic",
+    "workspaceCount": 6,
+    "monitorIndex": 0,
+    "monitorName": "HDMI-A-2",
+    "showClosedPinned": false,
+    "pinnedApps": [
+      {
+        "class": "firefox",
+        "exec": "firefox",
+        "icon": "firefox",
+        "title": "Firefox"
+      },
+      {
+        "class": "Spotify",
+        "exec": "spotify-launcher",
+        "icon": "spotify",
+        "title": "Spotify"
+      },
+      {
+        "class": "vesktop",
+        "exec": "vesktop",
+        "icon": "vesktop",
+        "title": "Discord"
+      },
+      {
+        "class": "org.gnome.Nautilus",
+        "exec": "nautilus",
+        "icon": "org.gnome.Nautilus",
+        "title": "Files"
+      },
+      {
+        "class": "kitty",
+        "exec": "kitty",
+        "icon": "kitty",
+        "title": "Terminal"
+      }
+    ]
+  },
+  "theme": {
+    "fontFamily": "Iosevka Nerd Font",
+    "borderRadius": 16,
+    "activePreset": "Matugen",
+    "matugen": true,
+    "colors": {
+      "base": "#000000",
+      "blue": "#ffffff",
+      "crust": "#000000",
+      "green": "#ffffff",
+      "mantle": "#050505",
+      "maroon": "#808080",
+      "mauve": "#d0d0d0",
+      "overlay0": "#5a5a5a",
+      "overlay1": "#7a7a7a",
+      "overlay2": "#9a9a9a",
+      "peach": "#cccccc",
+      "pink": "#e0e0e0",
+      "red": "#a0a0a0",
+      "sapphire": "#e0e0e0",
+      "subtext0": "#a0a0a0",
+      "subtext1": "#c0c0c0",
+      "surface0": "#1a1a1a",
+      "surface1": "#2a2a2a",
+      "surface2": "#3a3a3a",
+      "teal": "#c0c0c0",
+      "text": "#ffffff",
+      "yellow": "#ffffff"
+    }
+  },
+  "idle": {
+    "enabled": false,
+    "actions": {
+      "dim": {
+        "id": "dim",
+        "timeout": 150,
+        "enabled": false,
+        "respectInhibitors": true,
+        "mprisInhibit": false,
+        "command": "",
+        "resumeCommand": "",
+        "isCustom": false
+      },
+      "dpms": {
+        "id": "dpms",
+        "timeout": 450,
+        "enabled": false,
+        "respectInhibitors": true,
+        "mprisInhibit": false,
+        "command": "",
+        "resumeCommand": "",
+        "isCustom": false
+      },
+      "lock": {
+        "id": "lock",
+        "timeout": 300,
+        "enabled": false,
+        "respectInhibitors": true,
+        "mprisInhibit": false,
+        "command": "",
+        "resumeCommand": "",
+        "isCustom": false
+      },
+      "suspend": {
+        "id": "suspend",
+        "timeout": 600,
+        "enabled": true,
+        "respectInhibitors": true,
+        "mprisInhibit": false,
+        "command": "",
+        "resumeCommand": "",
+        "isCustom": false
+      }
+    }
+  },
+  "notifications": {
+    "dnd": true,
+    "position": "top right",
+    "sound": true,
+    "soundFile": "/home/arch/.local/share/serpantinum/src/assets/sounds/notifications/Botanica.wav"
+  },
+  "display": {
+    "monitors": {
+      "eDP-1": {
+        "enabled": false,
+        "scale": 1
+      },
+      "HDMI-A-2": {
+        "scale": 0.8,
+        "powerEnabled": true
+      }
+    }
+  },
+  "wallpaperDir": "/home/arch/Pictures/Wallpapers"
+}
+

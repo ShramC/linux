@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+# Управление скоростью вентиляторов и профилем производительности Acer Nitro
+
+set_mode() {
+    local dbus_profile="$1"
+    local name="$2"
+    
+    busctl set-property net.hadess.PowerProfiles /net/hadess/PowerProfiles net.hadess.PowerProfiles ActiveProfile s "$dbus_profile" 2>/dev/null
+    
+    local sys_profile
+    sys_profile=$(cat /sys/firmware/acpi/platform_profile 2>/dev/null)
+    
+    echo "🌀 Режим вентиляторов переключен: $name"
+    echo "📊 Системный профиль ACPI: $sys_profile"
+}
+
+show_status() {
+    local sys_profile
+    sys_profile=$(cat /sys/firmware/acpi/platform_profile 2>/dev/null)
+    
+    echo "❄️ Текущий режим вентиляторов: $sys_profile"
+    echo ""
+    echo "Доступные команды в терминале:"
+    echo "  low      - Тихий режим (минимальные обороты кулеров)"
+    echo "  balanced - Сбалансированный режим (автоматический)"
+    echo "  boost    - Максимальные обороты кулеров (турбо-охлаждение)"
+}
+
+cmd=$(basename "$0")
+mode="${1:-$cmd}"
+
+case "${mode,,}" in
+    low|quiet|silent|low-power|power-saver)
+        set_mode "power-saver" "LOW (Тихий)"
+        ;;
+    balanced|normal|auto)
+        set_mode "balanced" "BALANCED (Сбалансированный)"
+        ;;
+    boost|max|performance|turbo)
+        set_mode "performance" "BOOST (Максимальное охлаждение / Турбо)"
+        ;;
+    status|fan)
+        show_status
+        ;;
+    *)
+        show_status
+        ;;
+esac
